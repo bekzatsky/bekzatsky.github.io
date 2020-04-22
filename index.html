@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+    <link href="https://fonts.googleapis.com/css?family=Modern+Antiqua|Teko&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6d8667d4ac.js" crossorigin="anonymous"></script>
+    <title>Personal site</title>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <div class="header__inner">
+            <a class="logo" href="#">
+                <i class="fas fa-laptop-code"></i>
+            </a>
+            <ul class="m-menu">
+                <li class="close-menu"><i class="fas fa-times-circle"></i></li>
+                <li><a class="m-menu__link" href="#">About</a></li>
+                <li><a class="m-menu__link" href="#">Experience</a></li>
+                <li><a class="m-menu__link" href="#">Contacts</a></li>
+            </ul>
+            <a class="bar" href="#"><i class="fas fa-bars"></i></a>
+            <nav class="nav">
+                <a class="nav__link" href="#">About</a>
+                <a class="nav__link" href="#">Experience</a>
+                <a class="nav__link" href="#">Contacts</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<div class="intro">
+    <div class="container">
+        <div class="intro__inner">
+            <span class="intro__text">
+                Hey, I'm Bekzat
+                <br>
+                a Kazakhstan
+                <span class="intro__span">back-end developer</span>
+                <br>
+                working in Astana city
+            </span>
+        </div>
+    </div>
+</div>
+
+
+<script
+        src="https://code.jquery.com/jquery-3.5.0.min.js"
+        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+        crossorigin="anonymous">
+</script>
+<script>
+    $(function () {
+        var link = $('.bar');
+        var close = $('.close-menu');
+        var menu = $('.m-menu');
+        link.on('click', function (event) {
+            event.preventDefault();
+            menu.toggleClass('m-menu__active');
+        });
+        close.on('click', function (event) {
+            event.preventDefault();
+            menu.toggleClass('m-menu__active');
+        });
+    });
+
+    var wnd = $(window),
+        opacityControl = $('.header');
+
+    wnd.scroll(function () {
+        var top = wnd.scrollTop(),
+            opacity = top > 200 ? 1 : top * 2 / 1000;
+        opacityControl.css('background-color', 'rgba(0, 0, 0, ' + opacity + ')');
+    });
+</script>
+</body>
+</html>

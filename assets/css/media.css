@@ -1,0 +1,26 @@
+@media (max-width: 1199px) {
+    body {
+        font-size: 17px;
+    }
+    .intro__text {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 991px) {
+    body {
+        font-size: 17px;
+    }
+    .container {
+        padding: 50px 50px;
+    }
+    .bar {
+        display: block;
+    }
+    .nav {
+        display: none;
+    }
+    .intro__text {
+        font-size: 40px;
+    }
+}
