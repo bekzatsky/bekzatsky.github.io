@@ -43,6 +43,7 @@
                 <br>
                 working in Astana city
             </span>
+            <a class="down-arrow" href="#"><i class="fas fa-chevron-circle-down"></i></a>
         </div>
     </div>
 </div>
@@ -73,7 +74,7 @@
 
     wnd.scroll(function () {
         var top = wnd.scrollTop(),
-            opacity = top > 200 ? 1 : top * 2 / 1000;
+            opacity = top > 200 ? .7 : top * 2 / 1000;
         opacityControl.css('background-color', 'rgba(0, 0, 0, ' + opacity + ')');
     });
 </script>
